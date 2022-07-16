@@ -5,7 +5,9 @@ class DashfeedColors {
 
   static const Color transparent = Color(0x00000000);
 
-  static const Color darkGray = Color.fromARGB(255, 59, 59, 59);
+  static const Color topDarkGrey = Color.fromARGB(255, 49, 49, 49);
+
+  static const Color bottomDarkGrey = Color.fromARGB(255, 44, 44, 44);
 
   static const Color background = Color.fromARGB(255, 32, 32, 32);
 
