@@ -1,7 +1,7 @@
 import 'package:dashfeed/widgets/dashfeed_colors.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/gradient_app_bar.dart';
+import 'widgets/dashfeed_app_bar.dart';
 
 void main() {
   runApp(const Dashfeed());
@@ -13,11 +13,13 @@ class Dashfeed extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return WidgetsApp(
-      onGenerateRoute: onGenerateRoute(),
+    return MaterialApp(
       title: 'DashFeed',
-      home: const Dashboard(title: 'Flutter Demo Home Page'),
+      home: const Dashboard(title: 'DashFeed'),
       color: DashfeedColors.dashfeedPurple,
+      theme: ThemeData(
+        scaffoldBackgroundColor: DashfeedColors.background,
+      ),
     );
   }
 
@@ -41,7 +43,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          GradientAppBar(widget.title),
+          DashfeedAppBar(widget.title),
         ],
       ),
     );
