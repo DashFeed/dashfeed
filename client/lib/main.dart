@@ -1,4 +1,5 @@
 import 'package:dashfeed/widgets/dashfeed_colors.dart';
+import 'package:dashfeed/widgets/dashfeed_panel_grid.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/dashfeed_app_bar.dart';
@@ -41,9 +42,10 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Row(
         children: <Widget>[
           DashfeedAppBar(widget.title),
+          const Expanded(child: DashfeedPanelGrid())
         ],
       ),
     );
